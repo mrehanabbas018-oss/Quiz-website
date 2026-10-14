@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuizMaster | Learn and Practice</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#" id="logo">🎓 QuizMaster</a>
+    <span class="header-note">Learn • Practice • Improve</span>
+  </header>
+
+  <main class="container">
+    <section id="home-screen" class="screen">
+      <div class="hero">
+        <p class="eyebrow">WELCOME TO QUIZMASTER</p>
+        <h1>Test your knowledge.<br><span>Grow your skills.</span></h1>
+        <p>Choose a topic, answer 5 questions, and see how much you've learned.</p>
+      </div>
+      <h2>Choose a subject</h2>
+      <div id="subject-list" class="subject-grid"></div>
+      <p class="tip">Your best scores are saved on this device.</p>
+    </section>
+
+    <section id="quiz-screen" class="screen hidden" aria-labelledby="quiz-title">
+      <div class="quiz-top">
+        <div>
+          <p class="eyebrow" id="quiz-subject"></p>
+          <h1 id="quiz-title">Quiz</h1>
+        </div>
+        <div class="timer" id="timer">⏱ 01:00</div>
+      </div>
+      <div class="progress-row">
+        <span id="progress-text"></span>
+        <span id="answered-text"></span>
+      </div>
+      <div class="progress-track"><div id="progress-fill"></div></div>
+      <article class="question-panel">
+        <h2 id="question-text"></h2>
+        <div id="options" class="options" role="group" aria-label="Answer options"></div>
+      </article>
+      <div class="quiz-actions">
+        <button id="previous-btn" class="btn btn-secondary">← Previous</button>
+        <button id="next-btn" class="btn btn-primary">Next →</button>
+      </div>
+      <button id="quit-btn" class="text-btn">Quit quiz</button>
+    </section>
+
+    <section id="result-screen" class="screen hidden" aria-labelledby="result-title">
+      <div class="result-panel">
+        <div class="trophy">🏆</div>
+        <h1 id="result-title">Quiz completed!</h1>
+        <p id="result-message"></p>
+        <div class="score" id="score-display"></div>
+        <p id="score-detail"></p>
+        <p id="best-score"></p>
+        <div class="result-actions">
+          <button id="retry-btn" class="btn btn-primary">Try Again</button>
+          <button id="home-btn" class="btn btn-secondary">Choose Another Quiz</button>
+        </div>
+      </div>
+      <h2>Review your answers</h2>
+      <div id="review-list" class="review-list"></div>
+    </section>
+  </main>
+
+  <footer>Made for learning with HTML, CSS & JavaScript</footer>
+</body>
+</html>
